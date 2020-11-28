@@ -17,12 +17,14 @@ make the game a pleasure to play and explore.
 
 ### Turtle Eggs
 **Trampling**
-- 🟢 Turtle eggs have a 1/100 chance per step of breaking while being walked on.
+- 🟢 Turtle eggs have a 1/100 chance per tick of breaking while being walked on. The egg can't be
+  broken while crouch-walked on.
   [TurtleEggBlock.java:41]
-- 🟢 Turtle eggs have a 1/3 chance of breaking when a living entity falls onto them. Zombies can't
-  break eggs by falling onto them. [TurtleEggBlock.java:47]
+- 🟢 Turtle eggs have a 1/3 chance of breaking when a living entity falls onto them. Chance of
+  breaking is not dependent on the heigh from which the entity falls. Zombies can't break eggs by
+  falling onto them. [TurtleEggBlock.java:47]
 - 🟢⚠️ When an anvil is dropped onto a turtle egg, the anvil breaks and the turtle egg is unharmed.
-- ⬜️ When a multi-egg block is trampled, only one egg is broken. [TurtleEggBlock.java:58]
+- ⬜️ When a multi-egg block is trampled, one egg is broken at a time. [TurtleEggBlock.java:58]
 - 🟢 Turtle eggs can't be trampled by bats - bats are explicitly called out in the code. Possibly
   the result of a hilarious bug report? [TurtleEggBlock.java:148]
 - 🟢⚠️ Despite special handling being added for bats, other flying mobs can technically trample
